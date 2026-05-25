@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vandan- शास्त्रोक्त वाण-दान विधी</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #FAF6F0;
+      --gold: #C5A46D;
+      --saffron: #E2954A;
+      --text: #2C2C2C;
+      --footer: #a94613;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding-top: 90px;
+    }
+
+    h1, h2 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 1000;
+      background: #e5cda7;
+      border-bottom: 1px solid #EDEAE4;
+      transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .header.scrolled{
+      background: rgba(250, 246, 240, 0.98);
+      box-shadow:0 1px 12px rgba(0,0,0,0.05);
+      border-bottom-color:#E8E4DE;
+    }
+
+    .header-container{
+      max-width:1200px;
+      width:100%;
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+    }
+
+    .logo{
+      height:54px;
+      width:auto;
+      display:block;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .logo:hover{
+      transform: scale(1.02);
+      opacity:0.98;
+    }
+
+    .about-link{
+      color: var(--text);
+      text-decoration:none;
+      font-size:16px;
+      font-weight:600;
+      padding:12px 20px;
+      border-radius:25px;
+      background: var(--saffron);
+      color:white;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .about-link:hover{
+      transform: translateY(-2px);
+      box-shadow:0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    .hero{
+      text-align:center;
+      padding:60px 20px 40px;
+    }
+
+    .hero h1{
+      font-size:42px;
+      color: var(--text);
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:18px;
+      max-width:800px;
+      margin:auto;
+      line-height:1.8;
+    }
+
+    .video-section{
+      max-width:950px;
+      margin:20px auto;
+      padding:0 20px;
+    }
+
+    .video-title{
+      text-align:center;
+      font-size:30px;
+      margin-bottom:25px;
+      color: var(--text);
+    }
+
+    .video-container{
+      width:100%;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .video-container iframe{
+      width:100%;
+      aspect-ratio:16 / 9;
+      max-width:900px;
+      border-radius:15px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    footer{
+      margin-top:30px;
+      background: #a94613;
+      color:#fff8e4;
+      text-align:center;
+      padding:24px 20px 30px;
+      font-size:15px;
+      border-radius:0;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .footer-inner{
+      max-width:900px;
+      margin:auto;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:12px;
+    }
+
+    .footer h2{
+      margin:0;
+      font-size:42px;
+      font-weight:800;
+      color:#ffffff;
+      letter-spacing:0.04em;
+      font-family:'Georgia', 'Times New Roman', serif;
+    }
+
+    .footer p{
+      margin:0;
+      font-size:24px;
+      color:#ffffff;
+      max-width:700px;
+      line-height:1.6;
+      font-family:'Georgia', serif;
+      letter-spacing:0.01em;
+    }
+
+    .footer-contact{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:6px;
+      color:#fff;
+      font-weight:600;
+      font-size:16px;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      letter-spacing:0.02em;
+    }
+
+    .footer-contact a{
+      color:#fff;
+      text-decoration:none;
+    }
+
+    .social-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:14px;
+    }
+
+    .social-button{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:12px 20px;
+      border:1px solid rgba(255,255,255,0.4);
+      border-radius:999px;
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      transition:background 0.2s ease, transform 0.2s ease;
+    }
+
+    .social-button svg{
+      width:20px;
+      height:20px;
+      flex-shrink:0;
+    }
+
+    .social-button:hover{
+      background:rgba(255,255,255,0.12);
+      transform:translateY(-2px);
+    }
+
+    .footer-note{
+      margin-top:16px;
+      font-size:14px;
+      color:rgba(255,255,255,0.78);
+    }
+
+    .whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25D366;
+      color:white;
+      padding:15px;
+      border-radius:50%;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      z-index:1001;
+    }
+
+    .whatsapp svg{
+      width:34px;
+      height:34px;
+      fill:white;
+    }
+
+    @media(max-width:768px){
+      body{
+        padding-top:58px;
+      }
+
+      header {
+        padding:10px 16px;
+      }
+
+      .header-container{
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+        text-align:left;
+        gap:8px;
+      }
+
+      .logo{
+        height:36px;
+      }
+
+      .about-link{
+        padding:7px 12px;
+        font-size:12px;
+        border-radius:20px;
+      }
+
+      .hero{
+        padding:60px 16px 30px;
+      }
+
+      .hero h1{
+        font-size:30px;
+      }
+
+      .hero p{
+        font-size:16px;
+        max-width:100%;
+      }
+
+      .video-section{
+        margin:30px auto;
+        padding:0 16px;
+      }
+
+      .video-title{
+        font-size:24px;
+      }
+
+      .video-container iframe{
+        height:calc((100vw - 32px) * 9 / 16);
+      }
+
+      footer{
+        padding:16px 14px 18px;
+        margin-top:20px;
+      }
+
+      .footer-inner{
+        gap:8px;
+      }
+
+      .footer h2{
+        font-size:24px;
+        letter-spacing:0.02em;
+      }
+
+      .footer p{
+        font-size:15px;
+        line-height:1.45;
+      }
+
+      .footer-contact{
+        font-size:13px;
+        gap:4px;
+      }
+
+      .social-buttons{
+        gap:8px;
+      }
+
+      .social-button{
+        padding:8px 14px;
+        gap:7px;
+        font-size:13px;
+      }
+
+      .social-button svg{
+        width:18px;
+        height:18px;
+      }
+
+      .footer-note{
+        margin-top:10px;
+        font-size:12px;
+      }
+
+      .whatsapp{
+        width:58px;
+        height:58px;
+        padding:0;
+        bottom:14px;
+        right:14px;
+      }
+
+      .whatsapp svg{
+        width:26px;
+        height:26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-container">
+      <div class="header-left">
+        <img src="assets/Vandan Transparent logo.png" alt="Vandan Logo" class="logo">
+      </div>
+      <a class="about-link" href="https://www.vandanpandit.com/about-us/" target="_blank" rel="noopener noreferrer">
+        About Us
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>शास्त्रोक्त वाण-दान विधी</h1>
+    <p>
+      महाराष्ट्रीयन परंपरेतील लेक-जावयाचा सन्मान आणि वाण-दानाचा संस्कार आता तज्ज्ञ गुरुजींच्या मार्गदर्शनाखाली घरबसल्या सहज पूर्ण करा.
+      मुख्य विधी सुरू करण्यापूर्वी कृपया तयारीचा व्हिडिओ पूर्णपणे पाहा. त्यानंतर “Start the Vidhi” बटणावर क्लिक करून शास्त्रोक्त वाण-दान विधी सुरू करा.
+    </p>
+  </section>
+
+  <section class="video-section">
+    <div class="video-title">
+      2. वंदन शास्त्रोक्त वाण-दान विधी
+    </div>
+
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/4NgsbSRwpYM"
+        title="वंदन शास्त्रोक्त वाण-दान विधी"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <h2>Connect With Us</h2>
+      <p>Begin your sacred journey with guidance rooted in tradition and care.</p>
+      <div class="footer-contact">
+        <a href="tel:+918104030300">+91 8104030300</a>
+        <a href="mailto:ops@vandanpandit.com">ops@vandanpandit.com</a>
+      </div>
+      <div class="social-buttons">
+        <a class="social-button" href="https://www.instagram.com/vandan_pandit.for.pooja/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+          Instagram
+        </a>
+        <a class="social-button" href="https://wa.me/918104030300" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.672.149-.198.297-.768.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.173.198-.297.298-.495.099-.198.05-.372-.025-.52-.075-.148-.672-1.618-.92-2.218-.242-.583-.487-.504-.672-.513l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.064 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.693.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.413-.075-.124-.273-.198-.57-.347z"/><path fill="currentColor" d="M12 2C6.486 2 2 6.486 2 12c0 2.103.632 4.055 1.717 5.701L2 22l4.433-1.392A9.939 9.939 0 0 0 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18c-1.555 0-3.006-.408-4.274-1.112l-.305-.18-2.631.827.885-2.566-.198-.326A7.96 7.96 0 0 1 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/></svg>
+          WhatsApp
+        </a>
+        <a class="social-button" href="https://www.youtube.com/@vandanpandit" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          YouTube
+        </a>
+      </div>
+      <div class="footer-note">© 2026 Vandan Pandit. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/918104030300" class="whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.672.149-.198.297-.768.966-.94 1.164-.173.198-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.058-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.173.198-.297.298-.495.099-.198.05-.372-.025-.52-.075-.148-.672-1.618-.92-2.218-.242-.583-.487-.504-.672-.513l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.064 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.693.626.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.413-.075-.124-.273-.198-.57-.347z"/>
+      <path fill="currentColor" d="M12 2C6.486 2 2 6.486 2 12c0 2.103.632 4.055 1.717 5.701L2 22l4.433-1.392A9.939 9.939 0 0 0 12 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm0 18c-1.555 0-3.006-.408-4.274-1.112l-.305-.18-2.631.827.885-2.566-.198-.326A7.96 7.96 0 0 1 4 12c0-4.411 3.589-8 8-8s8 3.589 8 8-3.589 8-8 8z"/>
+    </svg>
+  </a>
+
+  <script>
+    window.addEventListener("scroll", () => {
+      document.querySelector(".header").classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
